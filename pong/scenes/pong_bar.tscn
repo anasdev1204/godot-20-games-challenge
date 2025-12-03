@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bjmnufb7rnxyl"]
+
+[ext_resource type="Script" uid="uid://dtqbdl5qcs2qu" path="res://scripts/pong_bar.gd" id="1_0rrpb"]
+[ext_resource type="Texture2D" uid="uid://1u85l12c2cjd" path="res://assets/pong_bar.png" id="2_geo8h"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_0rrpb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_geo8h")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite2D/StaticBody2D"]
+polygon = PackedVector2Array(-1, -16, -1, 16, 1, 16, 1, -16)

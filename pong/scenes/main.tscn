@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://dv1uuf8ekm2l5"]
+
+[ext_resource type="Script" uid="uid://dvo8qc6y3y1ly" path="res://scripts/main.gd" id="1_o5qli"]
+[ext_resource type="PackedScene" uid="uid://bjmnufb7rnxyl" path="res://scenes/pong_bar.tscn" id="2_sugp2"]
+[ext_resource type="PackedScene" uid="uid://bnwsp8m18vj3i" path="res://scenes/pong_ball.tscn" id="3_jyhfs"]
+[ext_resource type="AudioStream" uid="uid://c36f4chp7pqlw" path="res://assets/bg_music.mp3" id="4_jyhfs"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_sugp2"]
+font_size = 24
+font_color = Color(1, 1, 1, 0.32941177)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_o5qli")
+pong_bar_sc = ExtResource("2_sugp2")
+pong_ball_sc = ExtResource("3_jyhfs")
+bar_scale = Vector2(5, 5)
+
+[node name="top_collider" parent="." instance=ExtResource("2_sugp2")]
+position = Vector2(0, -1)
+rotation = 1.5707964
+scale = Vector2(1, 100)
+
+[node name="bottom_collider" parent="." instance=ExtResource("2_sugp2")]
+position = Vector2(0, 651)
+rotation = 1.5707964
+scale = Vector2(1, 100)
+
+[node name="right_label" type="Label" parent="."]
+offset_right = 116.0
+offset_bottom = 33.5
+text = "Score: "
+label_settings = SubResource("LabelSettings_sugp2")
+
+[node name="left_label" type="Label" parent="."]
+offset_right = 116.0
+offset_bottom = 33.5
+text = "Score: "
+label_settings = SubResource("LabelSettings_sugp2")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_jyhfs")
+volume_db = -1.0
+autoplay = true

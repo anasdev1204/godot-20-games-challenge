@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://bnwsp8m18vj3i"]
+
+[ext_resource type="Texture2D" uid="uid://dp0jd1i5ixjpm" path="res://assets/pong_ball.png" id="1_snudy"]
+[ext_resource type="Script" uid="uid://bmfweo5sulxkf" path="res://scripts/pong_ball.gd" id="2_30i2d"]
+[ext_resource type="AudioStream" uid="uid://cbkafao3oxi41" path="res://assets/boing_sfx.mp3" id="3_76ycj"]
+[ext_resource type="AudioStream" uid="uid://bfx7o3ue8mblv" path="res://assets/score_sfx.mp3" id="4_msmvx"]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("2_30i2d")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_snudy")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-2, -2, -2, 2, 2, 2, 2, -2)
+
+[node name="BounceAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_76ycj")
+
+[node name="ScoreAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_msmvx")
