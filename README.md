@@ -12,4 +12,6 @@ The first game I decided to make was pong. The objective I had while building th
 
 ## Breakout
 
-Currently working on it.
+The second game in the list was Breakout. It was very similar to pong so the development time was much shorter but I tried to add more stuff like a way to reset the game and some sfx.
+
+- Development Time: less then 2 hours.
