@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://blv2ophn6ttaw"]
+
+[ext_resource type="Texture2D" uid="uid://b0c2k8dahgyox" path="res://assets/pong_bar.png" id="1_wv7cx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_giubl"]
+size = Vector2(2, 32)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+rotation = 1.5707964
+scale = Vector2(5, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_wv7cx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_giubl")
