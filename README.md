@@ -15,3 +15,9 @@ The first game I decided to make was pong. The objective I had while building th
 The second game in the list was Breakout. It was very similar to pong so the development time was much shorter but I tried to add more stuff like a way to reset the game and some sfx.
 
 - Development Time: less then 2 hours.
+
+## Pacman
+
+The third game I decided to make was pacman. I have decided to go with it since it seemed a better challenge than what else was on the list. I tried making the assets on asperite but it took too much time for a mid result so I [used these assets from itch.io](https://checkpointcafe.itch.io/pacman-practice-assets). It was fun to make and learned how to use tilemaps and signals more effectively. Have not done the pathfinding part because I figured it would take too much time for a very specific use case that I probably won't ever use again.
+
+- Development Time: about 4 hours.
