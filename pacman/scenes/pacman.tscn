@@ -1,0 +1,213 @@
+[gd_scene load_steps=29 format=3 uid="uid://6intr717ovk4"]
+
+[ext_resource type="Script" uid="uid://cpheh75dj7g0p" path="res://scripts/pacman.gd" id="1_kjyp3"]
+[ext_resource type="Shader" uid="uid://bcpiodai2lcba" path="res://shaders/hit_flash.tres" id="2_ccr3a"]
+[ext_resource type="Texture2D" uid="uid://bqovwfysq288o" path="res://assets/PacManAssets-PacMan.png" id="2_utpjb"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ceynl"]
+shader = ExtResource("2_ccr3a")
+shader_parameter/is_hit = false
+shader_parameter/flash = Color(1, 1, 1, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ccr3a"]
+atlas = ExtResource("2_utpjb")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ceynl"]
+atlas = ExtResource("2_utpjb")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_47rue"]
+atlas = ExtResource("2_utpjb")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rx8a7"]
+atlas = ExtResource("2_utpjb")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_noplq"]
+atlas = ExtResource("2_utpjb")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0qx7c"]
+atlas = ExtResource("2_utpjb")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bgnd2"]
+atlas = ExtResource("2_utpjb")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e1jvo"]
+atlas = ExtResource("2_utpjb")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jno2f"]
+atlas = ExtResource("2_utpjb")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cc2ie"]
+atlas = ExtResource("2_utpjb")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n0x1e"]
+atlas = ExtResource("2_utpjb")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pmluw"]
+atlas = ExtResource("2_utpjb")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v8rr8"]
+atlas = ExtResource("2_utpjb")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tfk33"]
+atlas = ExtResource("2_utpjb")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ernvp"]
+atlas = ExtResource("2_utpjb")
+region = Rect2(96, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dtnpd"]
+atlas = ExtResource("2_utpjb")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nlgrm"]
+atlas = ExtResource("2_utpjb")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_luhwp"]
+atlas = ExtResource("2_utpjb")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2vipk"]
+atlas = ExtResource("2_utpjb")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1gynd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ccr3a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ceynl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_47rue")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rx8a7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_noplq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0qx7c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bgnd2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e1jvo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jno2f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cc2ie")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n0x1e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pmluw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v8rr8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tfk33")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ernvp")
+}],
+"loop": false,
+"name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dtnpd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nlgrm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_luhwp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2vipk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tjtka"]
+size = Vector2(22, 22)
+
+[sub_resource type="Animation" id="Animation_ccr3a"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:material:shader_parameter/is_hit")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_utpjb"]
+resource_name = "hit"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:material:shader_parameter/is_hit")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ceynl"]
+_data = {
+&"RESET": SubResource("Animation_ccr3a"),
+&"hit": SubResource("Animation_utpjb")
+}
+
+[node name="CharacterBody2D" type="CharacterBody2D" groups=["pacman"]]
+script = ExtResource("1_kjyp3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_ceynl")
+sprite_frames = SubResource("SpriteFrames_1gynd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_tjtka")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_ceynl")
+}
