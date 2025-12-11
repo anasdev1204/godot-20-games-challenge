@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://f3opufr2kxp8"]
+
+[ext_resource type="Script" uid="uid://cebprdocjspd5" path="res://scripts/main.gd" id="1_db5cl"]
+[ext_resource type="PackedScene" uid="uid://dm1txbxklvjnu" path="res://scenes/player_ship.tscn" id="2_06ig3"]
+[ext_resource type="PackedScene" uid="uid://bo7l02ov8d2eh" path="res://scenes/asteroid.tscn" id="3_sugp2"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_db5cl")
+ship_sc = ExtResource("2_06ig3")
+asteriod_sc = ExtResource("3_sugp2")
+
+[node name="Collisions" type="StaticBody2D" parent="."]
+position = Vector2(0, -160)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions"]
+polygon = PackedVector2Array(-320, 192, -328, -184, 320, -184, 320, 192, 328, -216, -320, -216)
+
+[node name="Backgrounds" type="Node2D" parent="."]
+z_index = -1
+
+[node name="RightSpawnMarker" type="Marker2D" parent="."]
+position = Vector2(304, -312)
+
+[node name="LeftSpawnMarker" type="Marker2D" parent="."]
+position = Vector2(-296, -312)

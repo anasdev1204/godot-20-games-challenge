@@ -1,0 +1,58 @@
+[gd_scene load_steps=9 format=3 uid="uid://dm1txbxklvjnu"]
+
+[ext_resource type="Script" uid="uid://cpkjggjooxteg" path="res://scripts/player_ship.gd" id="1_s3s13"]
+[ext_resource type="PackedScene" uid="uid://cdyhjvdwrkmeu" path="res://scenes/bullet.tscn" id="2_7t0u0"]
+[ext_resource type="Texture2D" uid="uid://bl1e86q50jpqk" path="res://assets/Spaceships.png" id="2_eqtaq"]
+[ext_resource type="Texture2D" uid="uid://cf7af08yb6egv" path="res://assets/Fx_03.png" id="3_ys4te"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ni5w"]
+atlas = ExtResource("3_ys4te")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yf02v"]
+atlas = ExtResource("3_ys4te")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g8niy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ni5w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yf02v")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ummnn"]
+radius = 13.038404
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_s3s13")
+projectile = ExtResource("2_7t0u0")
+fire_frequency = 0.25
+
+[node name="FiringAnimation" type="AnimatedSprite2D" parent="."]
+position = Vector2(1, -18)
+rotation = -1.5707964
+sprite_frames = SubResource("SpriteFrames_g8niy")
+frame = 1
+frame_progress = 1.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = -1.5707964
+texture = ExtResource("2_eqtaq")
+region_enabled = true
+region_rect = Rect2(272, 8, 32, 48)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -112)
+limit_left = -506
+limit_right = 506
+editor_draw_limits = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ummnn")
