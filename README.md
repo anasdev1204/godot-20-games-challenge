@@ -21,3 +21,9 @@ The second game in the list was Breakout. It was very similar to pong so the dev
 The third game I decided to make was pacman. I have decided to go with it since it seemed a better challenge than what else was on the list. I tried making the assets on asperite but it took too much time for a mid result so I [used these assets from itch.io](https://checkpointcafe.itch.io/pacman-practice-assets). It was fun to make and learned how to use tilemaps and signals more effectively. Have not done the pathfinding part because I figured it would take too much time for a very specific use case that I probably won't ever use again.
 
 - Development Time: about 4 hours.
+
+## Asteroid
+
+The fourth game was Asteroid. Making this one was way simpler as I got used to the engine and to how the overall development logic is. It was however a new experience to experiment with infinite maps and shooting projectiles. The game is definetly not polished but I feel like the remaining parts to cover are not that challenging to do.
+
+- Development Time: between 3 and 4 hours.
