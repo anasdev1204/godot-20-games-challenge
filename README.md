@@ -24,6 +24,6 @@ The third game I decided to make was pacman. I have decided to go with it since 
 
 ## Asteroid
 
-The fourth game was Asteroid. Making this one was way simpler as I got used to the engine and to how the overall development logic is. It was however a new experience to experiment with infinite maps and shooting projectiles. The game is definetly not polished but I feel like the remaining parts to cover are not that challenging to do.
+The fourth game was Asteroid. Making this one was way simpler as I got used to the engine and to how the overall development logic is. It was however a new experience to experiment with infinite maps and shooting projectiles. The game is definetly not polished but I feel like the remaining parts to cover are not that challenging to do. [Used these backgrounds](https://virusystem.itch.io/background-space) and [these assets from itch](https://mattwalkden.itch.io/lunar-battle-pack) .
 
 - Development Time: between 3 and 4 hours.
